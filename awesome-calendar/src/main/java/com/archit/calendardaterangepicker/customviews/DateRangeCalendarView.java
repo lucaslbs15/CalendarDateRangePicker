@@ -48,7 +48,7 @@ public class DateRangeCalendarView extends RelativeLayout {
     private TextView tvClear;
     private Button btConfirm;
     private RelativeLayout containerLayout;
-    private boolean enableRange = true;
+    private boolean enableRange;
 
     private final static int TOTAL_ALLOWED_MONTHS = 30;
 
