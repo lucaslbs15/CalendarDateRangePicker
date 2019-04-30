@@ -23,7 +23,7 @@ public class AdapterEventCalendarMonths extends PagerAdapter {
     private DateRangeCalendarView.CalendarListener calendarListener;
     private DateRangeCalendarManager dateRangeCalendarManager;
     private Handler mHandler;
-    private boolean enableRange = true;
+    private boolean enableRange;
 
     public AdapterEventCalendarMonths(Context mContext, List<Calendar> list, CalendarStyleAttr calendarStyleAttr, boolean enableRange) {
         this.mContext = mContext;
