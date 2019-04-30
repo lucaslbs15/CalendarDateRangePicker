@@ -71,6 +71,7 @@ public class DateRangeCalendarView extends RelativeLayout {
         locale = new Locale("pt", "BR");
         calendarStyleAttr = new CalendarStyleAttr(context, attrs);
 
+        enableRange = calendarStyleAttr.isEnableRange();
         LayoutInflater layoutInflater = LayoutInflater.from(context);
         layoutInflater.inflate(R.layout.layout_calendar_container, this, true);
 
@@ -440,9 +441,5 @@ public class DateRangeCalendarView extends RelativeLayout {
 
     public boolean isEnableRange() {
         return enableRange;
-    }
-
-    public void setEnableRange(boolean enableRange) {
-        this.enableRange = enableRange;
     }
 }

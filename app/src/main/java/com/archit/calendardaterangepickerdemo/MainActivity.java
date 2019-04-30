@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         calendar = findViewById(R.id.calendar);
         calendar.setClearEnabled(false);
         calendar.setConfirmEnabled(false);
-        calendar.setEnableRange(true);
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "JosefinSans-Regular.ttf");
 //        Typeface typeface = Typeface.createFromAsset(getAssets(), "LobsterTwo-Regular.ttf");
@@ -34,7 +33,13 @@ public class MainActivity extends AppCompatActivity {
         calendar.setCalendarListener(new DateRangeCalendarView.CalendarListener() {
             @Override
             public void onFirstDateSelected(Calendar startDate) {
-                calendar.setSubtitle(getString(R.string.subtitle_return));
+                if (calendar.isEnableRange()) {
+                    calendar.setSubtitle(getString(R.string.subtitle_return));
+                } else {
+                    calendar.setClearEnabled(true);
+                    calendar.setConfirmEnabled(true);
+                }
+
             }
 
             @Override
