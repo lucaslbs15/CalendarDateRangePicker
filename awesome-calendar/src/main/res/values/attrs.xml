@@ -31,6 +31,7 @@
         <attr name="clear_margin_bottom" format="dimension"/>
         <attr name="clear_text_color" format="color"/>
         <attr name="clear_icon" format="reference"/>
+        <attr name="enable_range" format="boolean"/>
 
         <attr name="container_margin_vertical" format="dimension"/>
         <attr name="container_margin_horizontal" format="dimension"/>

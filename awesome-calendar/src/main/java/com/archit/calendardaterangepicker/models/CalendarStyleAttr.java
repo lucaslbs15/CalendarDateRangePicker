@@ -46,6 +46,7 @@ public class CalendarStyleAttr {
     private String confirmButtonText;
     private float confirmButtonSize;
     private int confirmButtonTextColor;
+    private boolean enableRange;
 
     public CalendarStyleAttr(Context context) {
         this.context = context;
@@ -130,6 +131,7 @@ public class CalendarStyleAttr {
                 shouldEnabledTime = ta.getBoolean(R.styleable.DateRangeMonthView_enable_time_selection, false);
                 enabledPastDates = ta.getBoolean(R.styleable.DateRangeMonthView_enable_past_date,false);
                 isEditable = ta.getBoolean(R.styleable.DateRangeMonthView_editable,true);
+                enableRange = ta.getBoolean(R.styleable.DateRangeMonthView_enable_range,true);
 
                 textSizeTitle = ta.getDimension(R.styleable.DateRangeMonthView_text_size_title, textSizeTitle);
                 textSizeWeek = ta.getDimension(R.styleable.DateRangeMonthView_text_size_week, textSizeWeek);
@@ -291,6 +293,14 @@ public class CalendarStyleAttr {
 
     public void setEnabledPastDates(boolean enabledPastDates) {
         this.enabledPastDates = enabledPastDates;
+    }
+
+    public boolean isEnableRange() {
+        return enableRange;
+    }
+
+    public void setEnableRange(boolean enableRange) {
+        this.enableRange = enableRange;
     }
 
     /**
