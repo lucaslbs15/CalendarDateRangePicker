@@ -349,7 +349,7 @@ public class CalendarStyleAttr {
         return (int) subtitleMarginBottom;
     }
 
-    public boolean isShowClearButton() {
+    public boolean shouldShowClearButton() {
         return showClearButton;
     }
 
