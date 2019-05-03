@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dayOfMonthWidth">44dp</dimen>
+    <dimen name="weekendMargin">10dp</dimen>
+    <dimen name="weekMarginEnd">8dp</dimen>
+</resources>

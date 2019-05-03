@@ -24,6 +24,9 @@
     <dimen name="dayOfMonthPaddingBottom">0dp</dimen>
     <dimen name="dayOfMonthImageSize">4dp</dimen>
     <dimen name="dayOfMonthImageMarginTop">32dp</dimen>
+    <dimen name="dayOfMonthWidth">36dp</dimen>
+    <dimen name="weekendMargin">4dp</dimen>
+    <dimen name="weekMarginEnd">2dp</dimen>
 
     <dimen name="strip_height">28dp</dimen>
 
