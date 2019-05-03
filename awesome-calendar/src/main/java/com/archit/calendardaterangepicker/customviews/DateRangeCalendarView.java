@@ -8,12 +8,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -87,6 +84,7 @@ public class DateRangeCalendarView extends RelativeLayout {
         vpCalendar = findViewById(R.id.vpCalendar);
 
         tvClear = findViewById(R.id.tvClear);
+        tvClear.setVisibility(calendarStyleAttr.shouldShowClearButton() ? VISIBLE : GONE);
 
         btConfirm = findViewById(R.id.btConfirm);
 
