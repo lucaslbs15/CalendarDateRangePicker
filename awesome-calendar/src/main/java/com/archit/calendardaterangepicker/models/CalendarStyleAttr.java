@@ -47,6 +47,7 @@ public class CalendarStyleAttr {
     private float confirmButtonSize;
     private int confirmButtonTextColor;
     private boolean enableRange;
+    private boolean disableWeekends;
 
     public CalendarStyleAttr(Context context) {
         this.context = context;
@@ -132,6 +133,7 @@ public class CalendarStyleAttr {
                 enabledPastDates = ta.getBoolean(R.styleable.DateRangeMonthView_enable_past_date,false);
                 isEditable = ta.getBoolean(R.styleable.DateRangeMonthView_editable,true);
                 enableRange = ta.getBoolean(R.styleable.DateRangeMonthView_enable_range,true);
+                disableWeekends = ta.getBoolean(R.styleable.DateRangeMonthView_disable_weekends,false);
 
                 textSizeTitle = ta.getDimension(R.styleable.DateRangeMonthView_text_size_title, textSizeTitle);
                 textSizeWeek = ta.getDimension(R.styleable.DateRangeMonthView_text_size_week, textSizeWeek);
@@ -301,6 +303,10 @@ public class CalendarStyleAttr {
 
     public void setEnableRange(boolean enableRange) {
         this.enableRange = enableRange;
+    }
+
+    public boolean isDisableWeekends() {
+        return disableWeekends;
     }
 
     /**

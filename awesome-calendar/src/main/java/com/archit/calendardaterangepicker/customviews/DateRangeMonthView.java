@@ -260,6 +260,7 @@ class DateRangeMonthView extends LinearLayout {
         Calendar today = Calendar.getInstance();
 
         int date = calendar.get(Calendar.DATE);
+        int dayOFWeek = calendar.get(Calendar.DAY_OF_WEEK);
 
         if (currentCalendarMonth.get(Calendar.MONTH) != calendar.get(Calendar.MONTH)) {
             hideDayContainer(container);
@@ -279,6 +280,10 @@ class DateRangeMonthView extends LinearLayout {
             }
 
             container.tvDate.setText(String.valueOf(date));
+        }
+
+        if (calendarStyleAttr.isDisableWeekends() && (dayOFWeek == Calendar.SATURDAY  || dayOFWeek == Calendar.SUNDAY)) {
+            disableDayContainer(container);
         }
 
         container.rootView.setTag(DayContainer.GetContainerKey(calendar));

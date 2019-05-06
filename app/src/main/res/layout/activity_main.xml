@@ -36,7 +36,8 @@
         custom:subtitle_size="@dimen/subtitle_size"
         custom:clear_size="@dimen/clear_size"
         custom:confirm_button_size="@dimen/confirm_size"
-        custom:enable_range="true">
+        custom:enable_range="true"
+        custom:disable_weekends="false">
 
     </com.archit.calendardaterangepicker.customviews.DateRangeCalendarView>
 
